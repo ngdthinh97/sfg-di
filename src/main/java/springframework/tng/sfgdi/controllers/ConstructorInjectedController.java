@@ -1,10 +1,16 @@
 package springframework.tng.sfgdi.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
 import springframework.tng.sfgdi.services.GreetingService;
 
+@Controller
 public class ConstructorInjectedController {
+	
 	private final GreetingService greetingService;  // 1. tao 1 interface greetingService
 
+	//@Autowired   in constructor khong can phai @autowired 
 	public ConstructorInjectedController(GreetingService greetingService) { //2. tao constructor-controller
 		this.greetingService = greetingService; // 5. this.greetingService nhan method sayGreeting() co gia tri
 	}
