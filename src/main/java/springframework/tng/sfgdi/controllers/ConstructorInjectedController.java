@@ -1,6 +1,7 @@
 package springframework.tng.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import springframework.tng.sfgdi.services.GreetingService;
@@ -11,7 +12,8 @@ public class ConstructorInjectedController {
 	private final GreetingService greetingService;  // 1. tao 1 interface greetingService
 
 	//@Autowired   in constructor khong can phai @autowired 
-	public ConstructorInjectedController(GreetingService greetingService) { //2. tao constructor-controller
+	// Qualifier is going to give Spring a hint as to which bean you want to have injected 
+	public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) { //2. tao constructor-controller
 		this.greetingService = greetingService; // 5. this.greetingService nhan method sayGreeting() co gia tri
 	}
 	

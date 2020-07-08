@@ -5,14 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import springframework.tng.sfgdi.services.GreetingServiceImpl;
+import springframework.tng.sfgdi.services.ConstructorGreetingService;
 
 class SetterInjectedControllerTest {
 	SetterInjectedController controller;
 	@BeforeEach
 	void setUp() throws Exception {
 		controller = new SetterInjectedController();
-		controller.setGreetingService(new GreetingServiceImpl());
+		controller.setGreetingService(new ConstructorGreetingService());
 	}
 
 	@Test
