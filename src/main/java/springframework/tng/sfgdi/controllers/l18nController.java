@@ -1,9 +1,9 @@
 package springframework.tng.sfgdi.controllers;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Qualifier; 
 import org.springframework.stereotype.Controller;
 
-import springframework.tng.sfgdi.services.GreetingService;
+import springframework.tng.services.GreetingService;
 
 @Controller // this controller is control 2 language EN and VN , so there have a confict here. we have to config it in Profiles(application.properties)
 public class l18nController {

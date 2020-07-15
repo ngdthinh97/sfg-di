@@ -1,9 +1,9 @@
 package springframework.tng.sfgdi.controllers;
 
 
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller; 
 
-import springframework.tng.sfgdi.services.GreetingService;
+import springframework.tng.services.GreetingService;
 
 @Controller
 public class SimpleController {

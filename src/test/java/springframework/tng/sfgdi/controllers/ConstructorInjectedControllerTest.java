@@ -1,11 +1,11 @@
 package springframework.tng.sfgdi.controllers;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*; 
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import springframework.tng.sfgdi.services.ConstructorGreetingService;
+import springframework.tng.services.ConstructorGreetingService;
 
 class ConstructorInjectedControllerTest {
 

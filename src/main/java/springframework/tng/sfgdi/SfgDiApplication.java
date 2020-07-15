@@ -3,6 +3,7 @@ package springframework.tng.sfgdi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import springframework.tng.sfgdi.controllers.ConstructorInjectedController;
 import springframework.tng.sfgdi.controllers.PropertyInjectedController;
@@ -11,6 +12,7 @@ import springframework.tng.sfgdi.controllers.SimpleController;
 import springframework.tng.sfgdi.controllers.l18nController;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"springframework.tng.services","springframework.tng.sfgdi"}) //componentScan {specifier base package , defaulf package}
 public class SfgDiApplication {
 
 	public static void main(String[] args) {

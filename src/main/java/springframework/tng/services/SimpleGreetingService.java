@@ -1,4 +1,4 @@
-package springframework.tng.sfgdi.services;
+package springframework.tng.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
