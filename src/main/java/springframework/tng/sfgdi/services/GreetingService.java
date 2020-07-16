@@ -1,4 +1,4 @@
-package springframework.tng.services;
+package springframework.tng.sfgdi.services;
 
 
 public interface GreetingService {

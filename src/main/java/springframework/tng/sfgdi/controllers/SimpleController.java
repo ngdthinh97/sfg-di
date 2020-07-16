@@ -1,9 +1,10 @@
 package springframework.tng.sfgdi.controllers;
 
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller; 
 
-import springframework.tng.services.GreetingService;
+import springframework.tng.sfgdi.services.GreetingService;
 
 @Controller
 public class SimpleController {
