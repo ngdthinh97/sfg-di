@@ -9,6 +9,7 @@ import springframework.tng.sfgdi.controllers.ConstructorInjectedController;
 import springframework.tng.sfgdi.controllers.PropertyInjectedController;
 import springframework.tng.sfgdi.controllers.SetterInjectedController;
 import springframework.tng.sfgdi.controllers.SimpleController;
+import springframework.tng.sfgdi.examplebeans.FakeDataSource;
 
 //@ComponentScan(basePackages = {"springframework.tng.services","springframework.tng.sfgdi"}) //componentScan {specifier base package , defaulf package}
 @SpringBootApplication
@@ -18,21 +19,10 @@ public class SfgDiApplication {
 		
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		
-		SimpleController mController = (SimpleController) ctx.getBean("simpleController");
-		System.out.println("---------------------- Primary Bean");
-		System.out.println(mController.SayHello());
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUser());
 		
-		System.out.println("---------------------- Property");
-		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
-		System.out.println(propertyInjectedController.getGreeting());
 		
-		System.out.println("---------------------- Setter");
-		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
-		System.out.println(setterInjectedController.getGreeting());
-		
-		System.out.println("---------------------- Constructor");	
-		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
-		System.out.println(constructorInjectedController.getGreeting());
 	}
 
 }
