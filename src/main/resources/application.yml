@@ -1,0 +1,5 @@
+tng:
+  jms:
+    username: jms Username 
+    userpassword: 123jms
+    dburl: jmsunlimited
