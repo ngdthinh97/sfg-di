@@ -13,15 +13,7 @@ import springframework.tng.sfgdi.examplebeans.FakeDataSource;
 import springframework.tng.sfgdi.examplebeans.FakeJmsSource;
 
 @Configuration
-//@PropertySource({"classpath:datasource.properties","classpath:jms.properties"}) i was comment this 
-@PropertySources({  // also we can use multi properties like this
-	@PropertySource("classpath:datasource.properties"),
-	@PropertySource("classpath:jms.properties")
-})
 public class PropertyConfig {
-	
-	@Autowired
-	Environment env;
 	
 	@Value("${tng.username}")
 	String user;
@@ -46,7 +38,7 @@ public class PropertyConfig {
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fakeDataSource = new FakeDataSource();
-		fakeDataSource.setUser(env.getProperty("USERNAME"));
+		fakeDataSource.setUser(user);
 		fakeDataSource.setPassword(password);
 		fakeDataSource.setUrl(url);
 		return fakeDataSource;
