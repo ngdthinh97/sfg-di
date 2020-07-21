@@ -3,3 +3,8 @@ tng:
     username: jms Username 
     userpassword: 123jms
     dburl: jmsunlimited
+    
+---
+spring:  profiles: vntng:
+  jms:
+    username: jms Username $$$$$$ VIETNAM
